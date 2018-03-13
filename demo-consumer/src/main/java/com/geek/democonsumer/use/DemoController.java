@@ -7,5 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DemoController {
+	@Reference(version = "1.0.0")//里面有很多参数可供选择，请自行查询API
+	private DemoStubService demoStubService;
 
+	@GetMapping("test")
+	public int justTest() {
+		return demoStubService.testPlus(1, 2);
+	}
 }
