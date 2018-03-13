@@ -1,0 +1,13 @@
+spring:
+  dubbo:
+    application:
+      name: provider
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    protocol:
+      name: dubbo
+      port: 4100
+    scan: com.geek
+
+server:
+  port: 2017
